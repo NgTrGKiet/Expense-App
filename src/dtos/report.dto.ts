@@ -32,7 +32,7 @@ export class ReportResponseDto {
     source: string;
     amount: number;
 
-    @Expose({name: 'createdAt'})
+    @Expose({ name: 'createdAt' })
     transformCreatedAt() {
         return this.created_at
     }
@@ -40,7 +40,7 @@ export class ReportResponseDto {
     @Exclude()
     created_at: Date;
 
-    @Exclude() 
+    @Exclude()
     updated_at: Date;
 
     type: ReportType
@@ -48,4 +48,4 @@ export class ReportResponseDto {
     constructor(partial: Partial<ReportResponseDto>) {
         Object.assign(this, partial)
     }
-}
+}   
